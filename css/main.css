@@ -1,0 +1,476 @@
+/* ==========================================================================
+   MealBridge - Competition-Grade Design System & Core Styles
+   Brand: MealBridge | "Surplus food. Right place. Right time."
+   ========================================================================== */
+
+:root {
+  /* Brand Colors */
+  --bg-app: #FAFAF8;
+  --bg-card: #FFFFFF;
+  --bg-subtle: #F4F4F0;
+  --bg-muted: #ECECE8;
+
+  /* Typography Colors */
+  --text-charcoal-dark: #0F172A;
+  --text-charcoal: #1E293B;
+  --text-muted: #64748B;
+  --text-subtle: #94A3B8;
+
+  /* Action & Semantic Colors */
+  --primary-green: #059669;
+  --primary-green-hover: #047857;
+  --primary-green-light: #ECFDF5;
+  --primary-green-border: #A7F3D0;
+
+  --urgency-amber: #D97706;
+  --urgency-amber-hover: #B45309;
+  --urgency-amber-light: #FFFBEB;
+  --urgency-amber-border: #FDE68A;
+
+  --expiry-red: #DC2626;
+  --expiry-red-light: #FEF2F2;
+  --expiry-red-border: #FECACA;
+
+  --accent-blue: #2563EB;
+  --accent-blue-light: #EFF6FF;
+  --accent-blue-border: #BFDBFE;
+
+  /* Borders & Shadows */
+  --border-subtle: #E2E8F0;
+  --border-strong: #CBD5E1;
+
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-sm: 0 2px 6px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.06);
+  --shadow-lg: 0 16px 36px rgba(15, 23, 42, 0.08);
+
+  /* Border Radii (16px to 24px) */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Fonts */
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: #F8FAF8;
+  /* Dual-layer Precision Logistics Grid & Ambient Lighting Mesh */
+  background-image: 
+    /* Top Radiant Spotlight Cone from Navigation Header */
+    radial-gradient(ellipse 80% 650px at 50% 0%, rgba(16, 185, 129, 0.15) 0%, rgba(5, 150, 105, 0.05) 45%, transparent 75%),
+    /* Upper-Left Logistics Emerald Aura */
+    radial-gradient(circle 750px at 10% 16%, rgba(16, 185, 129, 0.13) 0%, rgba(5, 150, 105, 0.03) 45%, transparent 65%),
+    /* Upper-Right Real-time Coordination Sky Telemetry Glow */
+    radial-gradient(circle 800px at 90% 16%, rgba(14, 165, 233, 0.11) 0%, rgba(59, 130, 246, 0.03) 45%, transparent 65%),
+    /* Mid-Page Warmth & Urgency Glow */
+    radial-gradient(circle 700px at 75% 55%, rgba(245, 158, 11, 0.05) 0%, transparent 60%),
+    /* Lower Ambient Logistics Orb */
+    radial-gradient(circle 800px at 15% 82%, rgba(5, 150, 105, 0.09) 0%, transparent 65%),
+    /* Precision Micro Cross-Points (36px grid) */
+    radial-gradient(circle, rgba(15, 23, 42, 0.10) 1.25px, transparent 1.25px),
+    /* Delicate Architectural Grid Lines (Horizontal & Vertical) */
+    linear-gradient(to right, rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.035) 1px, transparent 1px);
+  background-size: 
+    100% 100%, 
+    100% 100%, 
+    100% 100%, 
+    100% 100%, 
+    100% 100%, 
+    36px 36px, 
+    36px 36px, 
+    36px 36px;
+  background-attachment: fixed;
+  background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+  color: var(--text-charcoal);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+#appViewContainer {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* Typography Hierarchy */
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-main);
+  color: var(--text-charcoal-dark);
+  font-weight: 800;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: var(--text-charcoal);
+}
+
+.text-muted { color: var(--text-muted); }
+.text-emerald { color: var(--primary-green) !important; }
+.text-amber { color: var(--urgency-amber) !important; }
+.text-danger { color: var(--expiry-red) !important; }
+.text-blue { color: var(--accent-blue) !important; }
+.font-bold { font-weight: 700; }
+.font-display { font-family: var(--font-display); }
+
+/* Global Navigation */
+.navbar-global {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: rgba(250, 250, 248, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 12px 0;
+}
+
+.navbar-inner {
+  width: 100%;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding-left: clamp(20px, 3vw, 48px);
+  padding-right: clamp(20px, 3vw, 48px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  box-sizing: border-box;
+}
+
+.navbar-nav-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.brand-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.brand-logo-img {
+  height: 50px;
+  width: auto;
+  max-width: 130px;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.brand-wrapper:hover .brand-logo-img {
+  transform: scale(1.03);
+}
+
+.brand-divider-v {
+  width: 1px;
+  height: 32px;
+  background-color: var(--border-subtle);
+}
+
+.brand-text-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-platform-badge {
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: var(--primary-green);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.brand-tagline {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: all 0.16s ease;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: var(--text-charcoal-dark);
+  background-color: var(--bg-subtle);
+}
+
+.nav-link.active {
+  color: var(--primary-green);
+  background-color: var(--primary-green-light);
+  font-weight: 700;
+}
+
+/* Nav Controls */
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.demo-grid-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--text-charcoal);
+  letter-spacing: 0.02em;
+}
+
+/* Standardized Button System */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-main);
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1.5px solid transparent;
+  outline: none;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.btn:focus-visible {
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.35);
+}
+
+.btn-primary {
+  background-color: var(--primary-green);
+  color: #FFFFFF;
+  border-color: var(--primary-green);
+  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-green-hover);
+  border-color: var(--primary-green-hover);
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.3);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn:disabled,
+.btn-primary:disabled,
+.btn-secondary:disabled,
+.btn-outline:disabled,
+.btn-danger:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.btn-secondary {
+  background-color: var(--bg-card);
+  color: var(--text-charcoal-dark);
+  border-color: var(--border-strong);
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-subtle);
+  border-color: var(--text-charcoal);
+  transform: translateY(-1px);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--text-charcoal-dark);
+  border-color: var(--border-strong);
+}
+
+.btn-outline:hover {
+  background-color: var(--bg-subtle);
+  border-color: var(--text-charcoal);
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--text-muted);
+}
+
+.btn-ghost:hover {
+  color: var(--text-charcoal-dark);
+  background-color: var(--bg-subtle);
+}
+
+.btn-danger {
+  background-color: var(--expiry-red);
+  color: #FFFFFF;
+  border-color: var(--expiry-red);
+}
+
+.btn-danger:hover {
+  background-color: #B91C1C;
+  border-color: #B91C1C;
+}
+
+.btn-sm {
+  padding: 6px 14px;
+  font-size: 0.82rem;
+}
+
+.btn-md {
+  padding: 10px 20px;
+  font-size: 0.92rem;
+}
+
+.btn-lg {
+  padding: 14px 28px;
+  font-size: 1.05rem;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* Indicators & Micro-animations */
+.status-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--primary-green);
+  display: inline-block;
+  animation: pulse-ring 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(0.9); opacity: 0.8; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Toggle */
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  color: var(--text-charcoal);
+}
+
+@media (max-width: 900px) {
+  .brand-divider-v,
+  .brand-text-col {
+    display: none;
+  }
+
+  .brand-logo-img {
+    height: 38px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.mobile-open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 16px 24px;
+    box-shadow: var(--shadow-md);
+    gap: 8px;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .demo-grid-badge {
+    display: none;
+  }
+}

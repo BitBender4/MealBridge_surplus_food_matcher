@@ -1,0 +1,9 @@
+{
+  "name": "mealbridge",
+  "version": "1.0.0",
+  "description": "MealBridge — Surplus food. Right place. Right time.",
+  "scripts": {
+    "dev": "py server.py",
+    "start": "py server.py"
+  }
+}

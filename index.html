@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MealBridge — Surplus food. Right place. Right time.</title>
+  <meta name="description"
+    content="MealBridge connects food donors such as wedding halls, caterers, and restaurants with nearby verified shelters before surplus cooked food becomes unsafe.">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Application Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/quick-donate.css">
+  <link rel="stylesheet" href="css/landing.css">
+  <link rel="stylesheet" href="css/dashboards.css">
+  <link rel="stylesheet" href="css/wizard.css">
+  <link rel="stylesheet" href="css/tracking.css">
+  <link rel="stylesheet" href="css/admin.css">
+
+  <link rel="icon" type="image/png" href="assets/images/mealbridge_mark_clean.png">
+</head>
+
+<body>
+
+  <!-- Global Navigation Header -->
+  <header class="navbar-global">
+    <div class="navbar-inner">
+      <!-- Brand Identity with Official Logo -->
+      <a href="#" class="brand-wrapper" id="brandLogo" aria-label="MealBridge Home">
+        <img src="assets/images/mealbridge_logo_clean.png" alt="MealBridge — Web Application" class="brand-logo-img" />
+        <div class="brand-divider-v"></div>
+        <div class="brand-text-col">
+          <span class="brand-platform-badge">SURPLUS RESCUE GRID</span>
+          <span class="brand-tagline">Surplus food. Right place. Right time.</span>
+        </div>
+      </a>
+
+      <!-- View Navigation Links -->
+      <nav class="navbar-nav-center">
+        <ul class="nav-links" id="navLinksGroup">
+          <li><a href="#" class="nav-link active" data-view="home">Home</a></li>
+          <li><a href="#" class="nav-link" data-view="quick-donate">Donate Food</a></li>
+          <li><a href="#" class="nav-link" data-view="find-donations">Find Donations</a></li>
+          <li><a href="#" class="nav-link" data-view="tracking">Track</a></li>
+          <li><a href="#" class="nav-link" data-view="impact">Impact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Global Controls: Demo Indicator & AI Donate Action -->
+      <div class="nav-controls">
+        <div class="demo-grid-badge" title="Live Hackathon Simulation Active">
+          <span class="status-pulse-dot"></span>
+          <span>Live Demo Grid</span>
+        </div>
+
+        <button class="btn btn-primary btn-sm" id="navDonateBtn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 5v14M5 12h14" />
+          </svg>
+          <span>Donate Food</span>
+        </button>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Dynamic Main Content Shell -->
+  <main id="appViewContainer">
+    <!-- View will be rendered dynamically by window.app -->
+  </main>
+
+  <!-- Global Footer -->
+  <footer
+    style="margin-top: auto; background-color: #121316; color: #9CA3AF; padding: 50px 0 30px; border-top: 1px solid #27272A; width: 100%;">
+    <div
+      style="width: 100%; max-width: 100%; padding-left: clamp(24px, 3.5vw, 64px); padding-right: clamp(24px, 3.5vw, 64px); box-sizing: border-box; display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: clamp(30px, 4vw, 60px); margin-bottom: 36px;">
+      <div>
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px;">
+          <div
+            style="background: #FFFFFF; padding: 6px 14px; border-radius: 10px; display: inline-flex; align-items: center; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+            <img src="assets/images/mealbridge_logo_clean.png" alt="MealBridge"
+              style="height: 38px; width: auto; display: block;" />
+          </div>
+          <div style="display: flex; flex-direction: column;">
+            <span
+              style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; color: #FFFFFF; letter-spacing: -0.01em;">MealBridge</span>
+            <span style="font-size: 0.74rem; color: #9CA3AF; font-weight: 600;">Surplus food. Right place. Right
+              time.</span>
+          </div>
+        </div>
+        <p style="font-size: 0.9rem; color: #9CA3AF; max-width: 460px; line-height: 1.6;">
+          Turning rushed food-donation messages into verified, time-sensitive matches before surplus food expires.
+          Connecting banquet halls, hotels, and hostels with verified shelters.
+        </p>
+      </div>
+
+      <div>
+        <h4 style="color: #FFFFFF; font-size: 0.85rem; font-weight: 800; letter-spacing: 0.05em; margin-bottom: 14px;">
+          COMPLIANCE & PROTOCOLS</h4>
+        <ul style="list-style: none; font-size: 0.88rem; display: flex; flex-direction: column; gap: 10px;">
+          <li>FSSAI Surplus Food Regulation 2019</li>
+          <li>4-Hour Thermal Safety Standard</li>
+          <li>Digital Infrared Chain-of-Custody</li>
+          <li>80G Tax Exemption Certificates</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="color: #FFFFFF; font-size: 0.85rem; font-weight: 800; letter-spacing: 0.05em; margin-bottom: 14px;">
+          URBAN HUBS</h4>
+        <ul style="list-style: none; font-size: 0.88rem; display: flex; flex-direction: column; gap: 10px;">
+          <li>Andheri West / Link Road Corridor</li>
+          <li>Lokhandwala Community Kitchens</li>
+          <li>MIDC & Chakala Catering Cluster</li>
+          <li>Versova & Juhu Volunteer Depots</li>
+        </ul>
+      </div>
+    </div>
+
+    <div
+      style="width: 100%; max-width: 100%; padding-left: clamp(24px, 3.5vw, 64px); padding-right: clamp(24px, 3.5vw, 64px); box-sizing: border-box;">
+      <div
+        style="padding-top: 24px; border-top: 1px solid #27272A; display: flex; align-items: center; justify-content: space-between; font-size: 0.82rem; flex-wrap: wrap; gap: 10px;">
+        <div>MealBridge Urban Surplus Grid &copy; 2026. Built for competition excellence.</div>
+        <div style="color: #059669; font-weight: 700;">● Grid Status: 100% Operational (Mumbai - Andheri Corridor)</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Scripts in Dependency Order -->
+  <script src="js/data.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/realtime.js"></script>
+  <script src="js/ai-parser.js"></script>
+  <script src="js/matching.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/views/landing.js"></script>
+  <script src="js/views/donor.js"></script>
+  <script src="js/views/ngo.js"></script>
+  <script src="js/views/wizard.js"></script>
+  <script src="js/views/tracking.js"></script>
+  <script src="js/views/admin.js"></script>
+  <script src="js/quick-donate.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>
